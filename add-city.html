@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima App</title>
+    <link rel="clima icon" href="img/icons8-día-parcialmente-nublado-82.png">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span>Clima App</span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Clima</a></li>
+                <li class="current-page"><a href="#">Agregar Ciudad</a></li>
+                <li><a href="help.html">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+        <h2>Agreguar Ciudad</h2>
+        <section>
+            <form action="add-city">
+                <label for="add-city">Ingrese la ciudad a agregar:</label>
+                <input type="text" id="add-city"><BR></BR>
+                <input type="submit" name="AGREGAR" value="Agreguar">
+            </form>
+        </section>
+        <section id="section-weather-result">
+            <!-- Sección donde se debe mostrar el clima de la ciudad -->
+        </section>
+    </main>
+    <footer>
+        <p>
+            Desarrollado con ♥ - LC2
+        </p>
+    </footer>
+</body>
+
+</html>
