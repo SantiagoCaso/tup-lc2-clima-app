@@ -8,6 +8,7 @@
     <link rel="clima icon" href="img/icons8-día-parcialmente-nublado-82.png">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/add-city.css">
 </head>
 
 <body>
@@ -27,14 +28,16 @@
     <main>
         <h2>Agreguar Ciudad</h2>
         <section>
-            <form action="add-city">
+            <form action="add-city" id="form-add-city">
                 <label for="add-city">Ingrese la ciudad a agregar:</label>
-                <input type="text" id="add-city"><BR></BR>
-                <input type="submit" name="AGREGAR" value="Agreguar">
+                <input type="text" id="add-city" name="agregar.ciudad">
+                <input type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit">
             </form>
         </section>
         <section id="section-weather-result">
-            <!-- Sección donde se debe mostrar el clima de la ciudad -->
+            <p id="verde">Ciudad agregada con ésxito</p>
+            <p id="rojo">Error: la ciudad consultada no se encuentra con la API o se produjo un error al consultar</p>
+            <p id="amarillo">La ciudad ingresada ya se encuentra almacenada</p>
         </section>
     </main>
     <footer>

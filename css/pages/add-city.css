@@ -1,1 +1,74 @@
+#add-city-submit{
+    background-color: var(--color-theme);
+    color: white;
+    width: 84px;
+    height: 39px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+section form#form-add-city{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+input#add-city{
+    width: 216px;
+    height: 40px;
+    border-radius: 6px;
+    border: solid 1px;
+}
+
+section#section-weather-result{
+    display: grid;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+section#section-weather-result p{
+    margin-top: 30px;
+}
+
+section#section-weather-result p#verde{
+    background-color: #28a745;
+    margin-top: 30px;
+    width: 495px;
+    height: 55px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+}
+
+section#section-weather-result p#rojo{
+    background-color: #dc3545;
+    margin-top: 30px;
+    width: 495px;
+    height: 74px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+
+section#section-weather-result p#amarillo{
+    background-color: #ffc107;
+    margin-top: 30px;
+    width: 495px;
+    height: 55px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+}
+
+
 

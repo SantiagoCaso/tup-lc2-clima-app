@@ -8,6 +8,7 @@
     <link rel="clima icon" href="img/icons8-día-parcialmente-nublado-82.png">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/help.css">
 </head>
 
 <body>
@@ -32,18 +33,23 @@
         <section>
             <form action="ayuda">
                 <label for="name">Nombre:</label>
-                <input type="text">
-                <br>
+                <input type="text" id="name" name="nombre" class="input-class">
+                
                 <label for="email">Email:</label>
-                <input type="email">
-                <br>
+                <input type="email" name="Email" id="email" class="input-class">
+                
                 <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mesage" cols="30" rows="10"></textarea>
-                <br>
-                <button>Limpiar</button>
-                <input type="submit">
+                <textarea name="mensaje" id="mesage" cols="30" rows="10" class="input-class"></textarea>
+                <div id="butons">
+                    <input type="submit" id="submit" name="Enviar">
+                    <!-- <input type="reset" id="clear" name="Limpiar" alt="Limpiar"> -->
+                    <button>Limpiar</button>
+                </div>
             </form>
         </section>
+        <div id="none-valid-container">
+        <p id="none-valid">Ingrese un email válido</p>
+        </div>
     </main>
     <footer>
         <p>
