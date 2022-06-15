@@ -9,6 +9,7 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/add-city.css">
+    <script src="js/common.js" defer></script>
 </head>
 
 <body>
@@ -32,13 +33,13 @@
             <form action="add-city" id="form-add-city">
                 <label for="add-city">Ingrese la ciudad a agregar:</label>
                 <input type="text" id="add-city" name="agregar.ciudad">
-                <input type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit">
             </form>
+            <button type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit" onclick="agregarNombreCiudad(newCity); addNewCityToLocalStorage(newCity); mostrarCartel(newCity);">Agregar</button>
         </section>
         <section id="section-weather-result">
-            <p class="mensaje gren">Ciudad agregada con ésxito</p>
-            <p class="mensaje red">Error: la ciudad consultada no se encuentra con la API o se produjo un error al consultar</p>
-            <p class="mensaje yellow">La ciudad ingresada ya se encuentra almacenada</p>
+            <p class="mensaje green" style="display: none;">Ciudad agregada con ésxito</p>
+            <p class="mensaje red" style="display: none;">Error: la ciudad consultada no se encuentra con la API o se produjo un error al consultar</p>
+            <p class="mensaje yellow" style="display: none;">La ciudad ingresada ya se encuentra almacenada</p>
         </section>
     </main>
     <footer>

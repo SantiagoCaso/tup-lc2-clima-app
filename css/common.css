@@ -105,7 +105,15 @@ h3 {
 
 main section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section#form-city-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 footer {
@@ -150,6 +158,7 @@ main section div p {
     height: 35px;
     border-radius: 10px;
     border: none;
+    margin-left: 5px;
 }
 
 #city-list{
@@ -182,7 +191,7 @@ main section div p {
     background-color: #dc3545;
 }
 
-.mensaje.gren{
+.mensaje.green{
     background-color: #28a745;
 }
 

@@ -8,6 +8,8 @@
     <link rel="clima icon" href="img/icons8-día-parcialmente-nublado-82.png">
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pages/index.css">
+    <script src="js/pages/index.js" defer></script>
 </head>
 
 <body>
@@ -32,15 +34,13 @@
             <form action="select-city">
                 <select name="city-list" id="city-list">
                     <option value="" disabled selected>Seleccionar Ciudad</option>
-                    <option value="ROSARIO">Rosario</option>
-                    <option value="RAFAELA">Rafaela</option>
                 </select>
-                <input type="submit" value="Consultar" name="submit" id="submit">
             </form>
+            <input type="submit" value="Consultar" name="submit" id="submit" onclick="showCard()">
         </section>
         <section id="section-weather-result">
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
-            <div class="card">
+            <div class="card" style="display: none;" id="carta-clima">
                 <h3>Rosario</h3>
                 <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="imagen-clima-rosrio">
                 <p>Temperatura: 25.31°</p>
@@ -49,6 +49,7 @@
                 <p>Velocidad de viento: 4.63km/h</p>
                 <p>Presión: 1011 P</p>
             </div>
+            <p class="mensaje yellow">No hay ciudades guardadas</p>
         </section>
     </main>
     <footer>
