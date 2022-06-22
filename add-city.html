@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/add-city.css">
     <script src="js/common.js" defer></script>
+    <script src="js/pages/add-city.js" defer></script>
 </head>
 
 <body>
@@ -34,10 +35,10 @@
                 <label for="add-city">Ingrese la ciudad a agregar:</label>
                 <input type="text" id="add-city" name="agregar.ciudad">
             </form>
-            <button type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit" onclick="agregarNombreCiudad(newCity); addNewCityToLocalStorage(newCity); mostrarCartel(newCity);">Agregar</button>
+            <button type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit" onclick="agregarNombreCiudad(newCity); addNewCityToLocalStorage(newCity);">Agregar</button>
         </section>
         <section id="section-weather-result">
-            <p class="mensaje green" style="display: none;">Ciudad agregada con ésxito</p>
+            <p class="mensaje green" style="display: none;">Ciudad agregada con éxito</p>
             <p class="mensaje red" style="display: none;">Error: la ciudad consultada no se encuentra con la API o se produjo un error al consultar</p>
             <p class="mensaje yellow" style="display: none;">La ciudad ingresada ya se encuentra almacenada</p>
         </section>
