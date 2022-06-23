@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/index.css">
     <script src="js/pages/index.js" defer></script>
+    <script src="js/common.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <section id="form-city-list">
             <!-- Sección donde se debe colocar el formulario, con el select y el botón de consultar -->
             <form action="select-city">
-                <select name="city-list" id="city-list">
+                <select name="city-list" id="city-list" onclick="showAlert()">
                     <option value="" disabled selected>Seleccionar Ciudad</option>
                 </select>
             </form>
@@ -49,7 +50,7 @@
                 <p>Velocidad de viento: 4.63km/h</p>
                 <p>Presión: 1011 P</p>
             </div>
-            <p class="mensaje yellow">No hay ciudades guardadas</p>
+            <p class="mensaje yellow" id="alert-no-cities" style="display: none;">No hay ciudades guardadas</p>
         </section>
     </main>
     <footer>

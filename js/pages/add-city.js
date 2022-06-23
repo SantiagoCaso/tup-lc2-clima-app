@@ -10,18 +10,6 @@ function agregarNombreCiudad(letCiudad){
     return letCiudad;
 }
 
-
-function getCitiesFromLocalStorage() {
-    let cities = localStorage.getItem("CITIES");
-    if (cities) {
-        cities = JSON.parse(cities);
-    } else {
-        cities = [];
-    }
-    return cities;
-}
-
-
 function addNewCityToLocalStorage(newCity) {
     let cities = getCitiesFromLocalStorage();  
     if (cities.indexOf(newCity) === -1) {
@@ -37,7 +25,7 @@ function addNewCityToLocalStorage(newCity) {
         cartelVerde.setAttribute("style", "display: none");
         cartelAmarillo.removeAttribute("style");
         cartelAmarillo.setAttribute("style", "display: flex");
-        console.log(newCity + 'Ya existe dentro del array de CITIES del localStorage');
+        console.log(newCity + ' Ya existe dentro del array de CITIES del localStorage');
     }else{
         console.log("Huvo un error al añadir la nueva ciudad");
         cartelRojo.removeAttribute("style");
