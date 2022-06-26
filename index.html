@@ -37,18 +37,21 @@
                     <option value="" disabled selected>Seleccionar Ciudad</option>
                 </select>
             </form>
-            <input type="submit" value="Consultar" name="submit" id="submit" onclick="showCard()">
+            <input type="submit" value="Consultar" name="submit" id="submit" onclick="fetchAPI()">
         </section>
         <section id="section-weather-result">
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
+            <div class="item">
+                <i class="loader --1"></i>
+            </div>
             <div class="card" style="display: none;" id="carta-clima">
-                <h3>Rosario</h3>
-                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="imagen-clima-rosrio">
-                <p>Temperatura: 25.31°</p>
+                <h3 id="city-title"></h3>
+                <img alt="imagen-clima" id="img-clima">
+                <!-- <p>Temperatura: 25.31°</p>
                 <p>Sensación termica: 24.65°</p>
                 <p>Humedad: 29%</p>
                 <p>Velocidad de viento: 4.63km/h</p>
-                <p>Presión: 1011 P</p>
+                <p>Presión: 1011 P</p> -->
             </div>
             <p class="mensaje yellow" id="alert-no-cities" style="display: none;">No hay ciudades guardadas</p>
         </section>
