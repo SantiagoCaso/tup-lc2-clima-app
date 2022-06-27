@@ -2,7 +2,7 @@
     width: auto;
     height: 100px;
 }
-
+/* Itenté poner el loader para lo que tarda en aparecer la card */
 .loader {
     --color-theme: #00594c;
     --color-active: #5df2d6;
@@ -48,3 +48,4 @@
 		transform: rotate(1turn);
 	}
 }
+

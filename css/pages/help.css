@@ -65,3 +65,8 @@ main div#none-valid-container{
     display: flex;
     justify-content: center
 }
+
+#butons{
+    display: flex;
+    flex-direction: row-reverse;
+}

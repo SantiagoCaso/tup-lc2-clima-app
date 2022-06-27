@@ -33,10 +33,11 @@ function showAlert() {
     }
 }
 
+
 const titleCity = document.getElementById("city-title");
 const climaImagen = document.getElementById("img-clima");
 const carta = document.getElementById("carta-clima");
-
+const loading = document.getElementById("div-carga");
 
 function fetchAPI() {
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+selctCities.value+'&appid=c4d912fb3ee953d0623afe3268b33688&units=metric&lang=es')
@@ -84,7 +85,21 @@ function fetchAPI() {
             carta.appendChild(p_pressure);
             carta.removeAttribute("style");
             carta.setAttribute("style", "display: block");
-        
         })
     .catch(error => alert("La API no funcionó"))
 }
+
+// carta.onload = function(){
+//     loading.removeAttribute("style");
+//     loading.setAttribute("style", "display: block");
+// }
+
+// async function asyncAwaitFetchApi(){
+//     try{
+//         loading.removeAttribute("style");
+//         loading.setAttribute("style", "display: block");
+//         await fetchAPI();
+//     }catch(error) {alert("La API no funcionó")}
+
+// }
+

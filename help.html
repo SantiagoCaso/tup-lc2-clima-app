@@ -9,6 +9,7 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pages/help.css">
+    <script src="js/pages/help.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
         <br>
         <p>Para poder consultar el clima, primero deberá <a href="add-city.html">Agregar una ciudad</a> y luego seleccionas la Ciudad en cuestión desde la pagina <a href="index.html">Clima</a></p>
         <section>
-            <form action="ayuda">
+            <form action="ayuda" id="formulario">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="nombre" class="input-class">
                 
@@ -41,20 +42,22 @@
                 
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="mensaje" id="mesage" cols="30" rows="10" class="input-class"></textarea>
-                <div id="butons">
-                    <input type="submit" id="submit" name="Enviar">
-                    <!-- <input type="reset" id="clear" name="Limpiar" alt="Limpiar"> -->
-                    <button>Limpiar</button>
-                </div>
             </form>
+            <div id="butons">
+                <input type="submit" id="submit" name="Enviar" onclick="validMail(inputEmail.value)">
+                <!-- <input type="reset" id="clear" name="Limpiar" alt="Limpiar"> -->
+                <button id="clear" onclick="limpiarForm()">Limpiar</button>
+            </div>
+
         </section>
         <div id="none-valid-container">
-        <p id="none-valid">Ingrese un email válido</p>
+            <p id="none-valid" style="display: none;">Ingrese un email válido</p>
         </div>
+        <p id="cartel "style="display: none;">cartel </p>
     </main>
     <footer>
         <p>
-            Desarrollado con ♥ - LC2
+            Desarrollado por Santiago Caso con ♥ - LC2
         </p>
     </footer>
 </body>
