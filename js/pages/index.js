@@ -1,4 +1,4 @@
-
+const btnConsultar = document.getElementById("submit");
 const selctCities = document.getElementById("city-list");
 
 function getCitiesFromLocalStorage() {
@@ -93,18 +93,5 @@ function fetchAPI() {
     .catch(error => alert("La API no funcionó"))
 }
 
-
-// carta.onload = function(){
-//     loading.removeAttribute("style");
-//     loading.setAttribute("style", "display: block");
-// }
-
-// async function asyncAwaitFetchApi(){
-//     try{
-//         loading.removeAttribute("style");
-//         loading.setAttribute("style", "display: block");
-//         await fetchAPI();
-//     }catch(error) {alert("La API no funcionó")}
-
-// }
-
+btnConsultar.addEventListener("click", fetchAPI);
+selctCities.addEventListener("click", showAlert);

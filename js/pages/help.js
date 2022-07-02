@@ -4,6 +4,7 @@ const formulario = document.getElementById("formulario");
 const btnLimpiar = document.getElementById("clear");
 let inputName = document.getElementById("name");
 let inputMessage = document.getElementById("mesage")
+const inputSumbit = document.getElementById("submit");
 
 
 function validMail(correo){
@@ -25,5 +26,12 @@ function limpiarForm(){
     formulario.reset(); 
 }
 
+function valorEmail(){
+    let inputEmailValue = inputEmail.value; 
+    return inputEmailValue;
+}
+
+btnLimpiar.addEventListener("click", limpiarForm);
+inputSumbit.addEventListener("click", valorEmail, validMail(inputEmailValue));
 
 

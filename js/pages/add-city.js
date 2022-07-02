@@ -3,6 +3,7 @@ const cartelVerde = document.querySelector(".mensaje.green")
 const cartelRojo = document.querySelector(".mensaje.red")
 const cartelAmarillo = document.querySelector(".mensaje.yellow")
 const loading = document.getElementById("div-carga");
+const btnAgregar = document.getElementById("add-city-submit");
 
 
 function exito() {
@@ -80,5 +81,5 @@ function addNewCityToLocalStorage() {
 }
 
 
-
+btnAgregar.addEventListener("click", addNewCityToLocalStorage); 
 
