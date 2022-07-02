@@ -40,9 +40,13 @@ const carta = document.getElementById("carta-clima");
 const loading = document.getElementById("div-carga");
 
 function fetchAPI() {
+    loading.removeAttribute("style");
+    loading.setAttribute("style", "display: block");
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+selctCities.value+'&appid=c4d912fb3ee953d0623afe3268b33688&units=metric&lang=es')
         .then(response => response.json())
         .then(datos => {
+            loading.removeAttribute("style");
+            loading.setAttribute("style", "display: none");
             console.log(datos);
             // City title 
             let name = datos['name'];
@@ -88,6 +92,7 @@ function fetchAPI() {
         })
     .catch(error => alert("La API no funcionó"))
 }
+
 
 // carta.onload = function(){
 //     loading.removeAttribute("style");
