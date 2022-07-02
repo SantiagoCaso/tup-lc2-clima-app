@@ -38,6 +38,9 @@
             <button type="submit" name="AGREGAR" value="Agregar" id ="add-city-submit" onclick="addNewCityToLocalStorage();">Agregar</button>
         </section>
         <section id="section-weather-result">
+            <div class="item" style="display: none;" id="div-carga">
+                <i class="loader --1"></i>
+            </div>
             <p class="mensaje green" style="display: none;">Ciudad agregada con éxito</p>
             <p class="mensaje red" style="display: none;">Error: la ciudad consultada no se encuentra con la API o se produjo un error al consultar</p>
             <p class="mensaje yellow" style="display: none;">La ciudad ingresada ya se encuentra almacenada</p>

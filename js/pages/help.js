@@ -13,7 +13,7 @@ function validMail(correo){
     console.log(expValido);
     if (expValido == false) {
         mailInvalido.removeAttribute("style");
-        mailInvalido.setAttribute("style", "display: block");
+        mailInvalido.setAttribute("style", "display: flex");
     } else if (expValido == true){
         mailInvalido.removeAttribute("style");
         mailInvalido.setAttribute("style", "display: none");

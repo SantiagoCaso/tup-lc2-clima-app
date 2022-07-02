@@ -2,13 +2,40 @@ let newCity = ' ';
 const cartelVerde = document.querySelector(".mensaje.green")
 const cartelRojo = document.querySelector(".mensaje.red")
 const cartelAmarillo = document.querySelector(".mensaje.yellow")
+const loading = document.getElementById("div-carga");
 
-function validCity(num1) {
-    if (num1 > 0) {
-        return true;
-    }else if (num1 <= 0){
-        return false;
-    }
+
+function exito() {
+    loading.removeAttribute("style");
+    loading.setAttribute("style", "display: none");        
+    cartelRojo.removeAttribute("style");
+    cartelRojo.setAttribute("style", "display: none");
+    cartelAmarillo.removeAttribute("style");
+    cartelAmarillo.setAttribute("style", "display: none");
+    cartelVerde.removeAttribute("style");
+    cartelVerde.setAttribute("style", "display: flex");
+}
+
+function existente(){
+    loading.removeAttribute("style");
+    loading.setAttribute("style", "display: none"); 
+    cartelRojo.removeAttribute("style");
+    cartelRojo.setAttribute("style", "display: none");       
+    cartelVerde.removeAttribute("style");
+    cartelVerde.setAttribute("style", "display: none");
+    cartelAmarillo.removeAttribute("style");
+    cartelAmarillo.setAttribute("style", "display: flex");
+}
+
+function error(){
+    loading.removeAttribute("style");
+    loading.setAttribute("style", "display: none"); 
+    cartelVerde.removeAttribute("style");
+    cartelVerde.setAttribute("style", "display: none");
+    cartelAmarillo.removeAttribute("style");
+    cartelAmarillo.setAttribute("style", "display: none");
+    cartelRojo.removeAttribute("style");
+    cartelRojo.setAttribute("style", "display: flex");
 }
 
 function addNewCityToLocalStorage() {
@@ -17,6 +44,8 @@ function addNewCityToLocalStorage() {
     newCity = ciudad.toUpperCase().trim();
 
     try {
+        loading.removeAttribute("style");
+        loading.setAttribute("style", "display: block");    
         fetch('https://api.openweathermap.org/data/2.5/weather?q=' + newCity + '&appid=c4d912fb3ee953d0623afe3268b33688&units=metric&lang=es')
         .then(response => response.json())
         .then(datos => {
@@ -27,33 +56,26 @@ function addNewCityToLocalStorage() {
                     cities.push(newCity);
                     localStorage.setItem("CITIES", JSON.stringify(cities));
                     console.log("Se añadio la nueva ciudad con exito");
-                    cartelAmarillo.removeAttribute("style");
-                    cartelAmarillo.setAttribute("style", "display: none");
-                    cartelVerde.removeAttribute("style");
-                    cartelVerde.setAttribute("style", "display: flex");
+                    exito();
                 } else if (cities.indexOf(newCity) > -1) {
-                    cartelVerde.removeAttribute("style");
-                    cartelVerde.setAttribute("style", "display: none");
-                    cartelAmarillo.removeAttribute("style");
-                    cartelAmarillo.setAttribute("style", "display: flex");
                     console.log(newCity + ' Ya existe dentro del array de CITIES del localStorage');
+                    existente();
                 } else {
                     console.log("Huvo un error al añadir la nueva ciudad");
-                    cartelRojo.removeAttribute("style");
-                    cartelRojo.setAttribute("style", "display: flex");
+                    error();
                 }            
             } else if (codigo == 404){
                 console.log("Ciudad no encontrada o ciudad inexistente");
-                cartelRojo.removeAttribute("style");
-                cartelRojo.setAttribute("style", "display: flex");
+                error();
             }
         })
     } catch (error) {
+        loading.removeAttribute("style");
+        loading.setAttribute("style", "display: none");        
         console.log("NO se encuentra la ciudad introducida")
         console.log(error);
         cartelRojo.removeAttribute("style");
         cartelRojo.setAttribute("style", "display: flex");
-
     }
 }
 
