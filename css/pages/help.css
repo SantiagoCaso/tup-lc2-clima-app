@@ -19,7 +19,7 @@ main section button{
     margin-right: 5px;
 }
 
-main section #submit{
+main section #button{
     background-color: var(--color-theme);
     color: white;
     width: 84px;
@@ -61,7 +61,7 @@ main p#none-valid{
     font-size: 14px;
 }
 
-main div#none-valid-container{
+main div#mesages-container{
     display: flex;
     justify-content: center
 }

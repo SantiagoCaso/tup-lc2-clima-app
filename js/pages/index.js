@@ -93,5 +93,9 @@ function fetchAPI() {
     .catch(error => alert("La API no funcionó"))
 }
 
+// function createCard(){
+//     fetchAPI();
+// }
+
 btnConsultar.addEventListener("click", fetchAPI);
 selctCities.addEventListener("click", showAlert);
